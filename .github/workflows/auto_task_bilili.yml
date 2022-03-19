@@ -37,10 +37,10 @@ jobs:
           BILI_JCT: ${{ secrets.BILI_JCT }}
           DEDEUSERID: ${{ secrets.DEDEUSERID }}
           SESSDATA: ${{ secrets.SESSDATA }}
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT: ${{ secrets.TELEGRAM_CHAT }}
+          telegrambottoken: ${{ secrets.TELEGRAM_TOKEN }}
+          telegramchatid: ${{ secrets.TELEGRAM_CHAT }}
           SERVERPUSHKEY: ${{ secrets.SERVERPUSHKEY }}
           TZ: Asia/Shanghai
           # 时区配置为Asia/Shanghai
         run:
-          mvn compile exec:java -Dexec.mainClass="top.misec.BiliMain" -Dexec.args="${DEDEUSERID} ${SESSDATA} ${BILI_JCT} ${SERVERPUSHKEY} ${ secrets.TELEGRAM_TOKEN } ${ secrets.TELEGRAM_CHAT }"
+          mvn compile exec:java -Dexec.mainClass="top.misec.BiliMain" -Dexec.args="${DEDEUSERID} ${SESSDATA} ${BILI_JCT} ${SERVERPUSHKEY} ${ secrets.telegramchatid } ${ secrets.telegrambottoken }"
