@@ -13,7 +13,7 @@
   "dedeuserid": "",
   "sessdata": "",
   "biliJct": "",
-  "telegrambottoken": ${{ secrets.TELEGRAM_TOKEN }},
-  "telegramchatid": ${{ secrets.TELEGRAM_CHAT }},
+  "telegrambottoken": "${{ secrets.TELEGRAM_TOKEN }}",
+  "telegramchatid": "${{ secrets.TELEGRAM_CHAT }}",
   "serverpushkey": null
 }
