@@ -32,7 +32,7 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-     - name: Build with Maven
+      - name: Build with Maven
         env:
           BILI_JCT: ${{ secrets.BILI_JCT }}
           DEDEUSERID: ${{ secrets.DEDEUSERID }}
@@ -43,4 +43,4 @@ jobs:
           TZ: Asia/Shanghai
           # 时区配置为Asia/Shanghai
           run:
-          mvn compile exec:java -Dexec.mainClass="top.misec.BiliMain::mainHandler" -Dexec.args="${DEDEUSERID} ${SESSDATA} ${BILI_JCT} ${SERVERPUSHKEY} ${secrets.TELEGRAM_CHAT} ${secrets.TELEGRAM_TOKEN}"
+           mvn compile exec:java -Dexec.mainClass="top.misec.BiliMain::mainHandler" -Dexec.args="${DEDEUSERID} ${SESSDATA} ${BILI_JCT} ${SERVERPUSHKEY} ${secrets.TELEGRAM_CHAT} ${secrets.TELEGRAM_TOKEN}"
